@@ -10,7 +10,9 @@
 <script>
 function myFunction() {
   /* Get the text field */
-  var copyText = document.getElementById("myInput");
+   var url_string = window.location.href;
+    var url = new URL(url_string);
+  var copyText = url.searchParams.get("code");
 
   /* Select the text field */
   copyText.select(); 
