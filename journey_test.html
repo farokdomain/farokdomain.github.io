@@ -18,15 +18,6 @@
   channel: campaignId,
   stage: 'code_stage',
   tags: ["campaignID:".concat(campaignId)],
-  alias: '',
-  data: {
-    'custom_bool': true,
-    'custom_int': Date.now(),
-    'custom_string': 'hello',
-    '$og_title': 'Title',
-    '$og_description': 'Description',
-    '$og_image_url':'http://lorempixel.com/400/400'
-  }
 };
 
 branch.setBranchViewData(linkData);
