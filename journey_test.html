@@ -14,11 +14,11 @@
  console.log("test");
  console.log(url.searchParams.get("~campaign_id"));
  var linkData = {
-  campaign: url.searchParams.get("~campaign_id"),
+  campaign: 'code_campaign',
   channel: 'code_channel',
   feature: 'code_feature',
   stage: 'code_stage',
-  tags: [ 'tag1', 'tag2', 'tag3' ],
+  tags: [campaignId],
   alias: '',
   data: {
     'custom_bool': true,
