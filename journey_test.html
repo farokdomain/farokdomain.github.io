@@ -12,11 +12,11 @@
  var url = new URL(url_string);
  var campaignId = url.searchParams.get("~campaign_id");
  console.log("test");
- console.log(campaignID);
+ console.log(url.searchParams.get("~campaign_id"));
  var linkData = {
   campaign: campaignId,
-  channel: 'facebook',
-  feature: 'dashboard',
+  channel: 'code_channel',
+  feature: 'code_feature',
   stage: 'new user',
   tags: [ 'tag1', 'tag2', 'tag3' ],
   alias: '',
