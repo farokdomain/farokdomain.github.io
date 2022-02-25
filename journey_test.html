@@ -11,13 +11,13 @@
  var url_string = window.location.href;
  var url = new URL(url_string);
  var campaignId = url.searchParams.get("~campaign_id");
- console.log("test");
- console.log(url.searchParams.get("~campaign_id"));
  var linkData = {
-  channel: url.searchParams.get("~campaign_id"),
-  feature: url.searchParams.get("~ad_set_id"),
+   //因为Journey已经有campaign和feature参数了，所以没法overwrite，所以将链接中的参数：
+//1. 加给channe参数
+   //2.加到tag里面，加的时候可以将参数名本身也加进去，如下面的例子
+  channel: campaignId,
   stage: 'code_stage',
-  tags: [campaignId],
+  tags: ["campaignID:".concat(campaignId)],
   alias: '',
   data: {
     'custom_bool': true,
