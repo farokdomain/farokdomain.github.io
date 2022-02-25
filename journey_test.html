@@ -11,6 +11,8 @@
  var url_string = window.location.href;
  var url = new URL(url_string);
  var campaignId = url.searchParams.get("~campaign_id");
+ console.log("test");
+ console.log(campaignID);
  var linkData = {
   campaign: campaignId,
   channel: 'facebook',
