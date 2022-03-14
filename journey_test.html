@@ -12,7 +12,9 @@ function myFunction() {
  var url = new URL(url_string);
  var redirect_path = url.searchParams.get("redirect_path");
  var linkData = {
-  'redirect_path':redirect_path
+     data: {
+    'redirect_path':redirect_path;
+  }
 };
 
 branch.setBranchViewData(linkData);
