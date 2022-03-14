@@ -12,14 +12,11 @@ function myFunction() {
  var url = new URL(url_string);
  var redirect_path = url.searchParams.get("redirect_path");
  var linkData = {
-  channel: campaignId,
-  stage: 'code_stage',
-  tags: ["campaignID:".concat(campaignId),"ad set id:".concat(ad_set_id)]
   'redirect_path':redirect_path
 };
 
 branch.setBranchViewData(linkData);
-}
+};
     branch.init('key_live_jk6osnJwGJQ2OSS0YBbYHiffAFiZQGcj');
     branch.addListener('didShowJourney',()=>{console.log('didshow')});
     myFunction();
