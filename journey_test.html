@@ -13,14 +13,13 @@ function myFunction() {
  var redirect_path = url.searchParams.get("redirect_path");
  var linkData = {
      data: {
-    'redirect_path':redirect_path;
+    'redirect_path':redirect_path
   }
 };
 
 branch.setBranchViewData(linkData);
 };
     branch.init('key_live_jk6osnJwGJQ2OSS0YBbYHiffAFiZQGcj');
-    branch.addListener('didShowJourney',()=>{console.log('didshow')});
     myFunction();
   </script>
 </head>
