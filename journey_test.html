@@ -12,6 +12,7 @@ function myFunction() {
  var url = new URL(url_string);
  var redirect_path = url.searchParams.get("redirect_path");
  var linkData = {
+     channel: 'facebook',
      data: {
     'redirect_path':redirect_path
   }
