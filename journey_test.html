@@ -7,18 +7,15 @@
     // load Branch
     (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
     // 给banner添加自定义的参数
-    function myFunction() {
+function myFunction() {
  var url_string = window.location.href;
  var url = new URL(url_string);
- var campaignId = url.searchParams.get("~campaign_id");
- var ad_set_id = url.searchParams.get("~ad_set_id");
+ var redirect_path = url.searchParams.get("redirect_path");
  var linkData = {
-   //因为Journey已经有campaign和feature参数了，所以没法overwrite，所以将链接中的参数：
-//1. 加给channe参数
-   //2.加到tag里面，加的时候可以将参数名本身也加进去，如下面的例子
   channel: campaignId,
   stage: 'code_stage',
   tags: ["campaignID:".concat(campaignId),"ad set id:".concat(ad_set_id)]
+  'redirect_path':redirect_path
 };
 
 branch.setBranchViewData(linkData);
